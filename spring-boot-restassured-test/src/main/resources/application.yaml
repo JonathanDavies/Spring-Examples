@@ -1,0 +1,9 @@
+spring:
+  main:
+    banner_mode: 'OFF'
+  jmx:
+    enabled: false
+server:
+    port: ${APP_PORT:9000}
+
+time_service_uri: http://will_be_overridden
