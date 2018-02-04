@@ -13,14 +13,17 @@ import javax.ws.rs.core.MediaType;
 public class EchoResource {
 
     private final EchoMessageCreator echoer;
+    private final Context context;
 
     @Inject
-    public EchoResource(EchoMessageCreator echoer) {
+    public EchoResource(EchoMessageCreator echoer, Context contex) {
         this.echoer = echoer;
+        this.context = contex;
     }
 
     @POST
     public EchoMessage echo(String echoText) {
-        return echoer.createEchoMessage(echoText);
+        context.setText(echoText);
+        return echoer.createEchoMessage();
     }
 }
