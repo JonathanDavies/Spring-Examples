@@ -1,0 +1,11 @@
+---
+databases:
+  item-db:
+    driver-class-name: org.postgresql.Driver
+    jdbcUrl: "jdbc:postgresql://localhost:5432/TEST"
+    maximum-pool-size: 2
+server:
+  port: "${APP_PORT:9000}"
+spring:
+  jmx.enabled: false
+  main.banner_mode: "OFF"
