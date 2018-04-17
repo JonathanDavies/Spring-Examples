@@ -1,0 +1,8 @@
+---
+liquibase.change-log: "classpath:db/liquibase-changelog.yaml"
+server:
+  port: "${APP_PORT:9000}"
+spring:
+  h2.concole.enabled: true
+  jmx.enabled: false
+  main.banner_mode: "OFF"
