@@ -19,7 +19,7 @@ public class ItemRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public int add(String item) {
+    int add(String item) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource()
                 .addValue("item", item);
 
@@ -28,7 +28,7 @@ public class ItemRepository {
         return keyHolder.getKey().intValue();
     }
 
-    public Item get(int id) {
+    Item get(int id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource()
                 .addValue("id", id);
 
@@ -36,7 +36,7 @@ public class ItemRepository {
         return items.isEmpty() ? null : items.get(0);
     }
 
-    public List<Item> list() {
+    List<Item> list() {
         return jdbcTemplate.query("SELECT * FROM items", itemRowMapper);
     }
 
