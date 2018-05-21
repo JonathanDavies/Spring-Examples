@@ -1,0 +1,4 @@
+server.port: ${APP_PORT:9000}
+spring:
+  main.banner_mode: 'OFF'
+  jmx.enabled: false
