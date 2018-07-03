@@ -16,9 +16,9 @@ public class EchoResource {
     private final Context context;
 
     @Inject
-    public EchoResource(EchoMessageCreator echoer, Context contex) {
+    public EchoResource(EchoMessageCreator echoer, Context context) {
         this.echoer = echoer;
-        this.context = contex;
+        this.context = context;
     }
 
     @POST

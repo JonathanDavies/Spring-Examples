@@ -11,7 +11,7 @@ public class EchoMessageCreator {
         return new EchoMessage(echoText);
     }
 
-    public EchoMessage createEchoMessage() {
+    EchoMessage createEchoMessage() {
         return new EchoMessage(context.getCount() + " - " + context.getText());
     }
 }

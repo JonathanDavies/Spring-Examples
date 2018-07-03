@@ -28,7 +28,7 @@ public class App {
     }
 
     @Component
-    @ApplicationPath("/resteasy/")
+    @ApplicationPath("/")
     public static class JaxrsApplication extends Application {
     }
 }

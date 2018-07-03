@@ -10,7 +10,7 @@ public class Context {
     private final AtomicInteger counter = new AtomicInteger();
     @Getter @Setter private String text;
 
-    public int getCount() {
+    int getCount() {
         return counter.incrementAndGet();
     }
 }
