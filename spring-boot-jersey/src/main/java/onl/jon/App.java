@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
-import javax.ws.rs.ApplicationPath;
-
 @Configuration
 @EnableAutoConfiguration
 public class App {
@@ -30,7 +28,6 @@ public class App {
     }
 
     @Component
-    @ApplicationPath("/service")
     public static class JerseyConfig extends ResourceConfig {
 
         public JerseyConfig() {

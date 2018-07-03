@@ -3,3 +3,14 @@
 spring:
   jmx.enabled: false
   main.banner_mode: "OFF"
+
+  jersey:
+    application-path: /service
+
+management:
+  server.port: 8081
+  endpoints:
+    web.base-path: /manage
+    enabled-by-default: false
+  endpoint.health.enabled: true
+  server.servlet.context-path: ${spring.jersey.application-path}

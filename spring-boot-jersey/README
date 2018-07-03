@@ -1,0 +1,7 @@
+curl -X POST \
+  http://localhost:8080/service/echo \
+  -H 'Content-Type: text/plain' \
+  -d jon
+
+curl -X GET \
+  http://localhost:8081/service/manage/health
